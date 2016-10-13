@@ -1,0 +1,377 @@
+/* ---------------------------------------------------------------------------
+* Main styles affecting the Application
+* ---------------------------------------------------------------------------
+*/
+
+//  FOR ALL
+
+header.intro {
+     background: url(#{$image-path}/prototype-V1/background.jpg) no-repeat 50% 50%;
+     background-size: cover;
+     position: relative;
+     nav {
+          display: inline-block;
+          width: 100%;
+          border-bottom: 1px solid rgba($white,0.4);
+          padding: 0.5em 1em;
+          .logo {
+               text-indent: -1000em;
+               display: inline-block;
+               width: 3em;
+               height: 3em;
+               background: url(#{$image-path}/prototype-V1/logo.png) no-repeat 50% 50%;
+               background-size: cover;
+          }
+          ul {
+               margin: 0;
+               padding: 0;
+               float: right;
+               li {
+                    margin: 0 0 0 0.75em;
+                    padding: 0;
+                    list-style: none;
+                    float: left;
+                    .search, .menu {
+                         display: inline-block;
+                         width: 3em;
+                         height: 3em;
+                         text-indent: -1000em;
+                    }
+                    .search {
+                         background: url(#{$image-path}/prototype-V1/search.png) no-repeat 100% 50%;
+                         background-size: 1.75em;
+                    }
+                    .menu {
+                         background: url(#{$image-path}/prototype-V1/menu.png) no-repeat 100% 50%;
+                         background-size: 1.75em;
+                    }
+               }
+          }
+     }
+     .row {
+          .columns {
+               position: relative;
+          }
+     }
+     h1, h2 {
+          color: $white;
+          float: left;
+          clear: both;
+          margin: 0;
+     }
+     h1 {
+          font-family: $montserrat-regular;
+     }
+     h2 {
+          font-family: $montserrat-bold;
+     }
+     p {
+          font-family: $montserrat-regular;
+          color: rgba($white,0.7);
+          margin: 2em 0 0 0;
+          font-size: 0.8rem;
+          span {
+               display: inline-block;
+               margin: 0 0 -0.85em 0;
+               .number {
+                    color: $green;
+                    font-family: $montserrat-bold;
+                    display: inline-block;
+                    border-radius: 50%;
+                    background: $white;
+                    width: 2.5em;
+                    height: 2.5em;
+                    margin: -0.45em 0.75em 0 0;
+                    float: left;
+                    @include flexbox;
+                    @include align-items(center);
+                    @include justify-content(center);
+               }
+          }
+     }
+     .border {
+          width: 5.5em;
+          height: 1px;
+          background: $white;
+          opacity: 0.6;
+          float: left;
+          clear: both;
+     }
+     ul.counter {
+          position: absolute;
+          right: 1em;
+          margin: 0;
+          padding: 0;
+          li {
+               margin: 0;
+               padding: 0;
+               display: inline-block;
+               width: 0.5em;
+               height: 0.5em;
+               background: $white;
+               opacity: 0.4;
+               float: left;
+               list-style: none;
+               border-radius: 50%;
+               margin: 0 0 0 0.5em;
+               &.active {
+                    background: none;
+                    opacity: 1;
+                    border: 2px solid $white;
+                    width: 1em;
+                    height: 1em;
+                    margin-top: -0.25em;
+               }
+          }
+     }
+     &.job-families {
+          .center-align {
+               text-align: center;
+               .border {
+                    float: none;
+                    display: inline-block;
+               }
+          }
+     }
+     .row-divider {
+          display: inline-block;
+          width: 100%;
+          background: url(#{$image-path}/prototype-V1/divider.svg) no-repeat 50% 50% !important;
+          background-size: cover;
+          margin: 0;
+          height: 1.688rem;
+          position: absolute;
+          bottom: -1px;
+     }
+     &.job-profile {
+          background: url(#{$image-path}/prototype-V1/explore/job-profile/image-1.jpg) no-repeat 50% 50%;
+          background-size: cover;
+          position: relative;
+          margin-bottom: 3em;
+          nav {
+               background: url(#{$image-path}/prototype-V1/background.jpg) no-repeat 50% 0%;
+               background-size: cover;
+               position: relative;
+               z-index: 1000;
+               border-bottom: 1px solid $white;
+          }
+          .row {
+               position: relative;
+               z-index: 1000;
+          }
+          p {
+               margin: 0.5em 0 0 0;
+          }
+          .wrapper {
+               position: absolute;
+               top: 0;
+               right: 0;
+               bottom: 0;
+               left: 0;
+               background: rgba($black,0.5);
+          }
+          section {
+               @include flexbox;
+               @include align-items(center);
+               @include justify-content(flex-start);
+               h1, p {
+                    // font-size: 1rem;
+                    font-family: $montserrat-regular;
+                    opacity: 0.7;
+                    margin: 0;
+                    line-height: 1;
+               }
+               p.large {
+                    font-family: $montserrat-bold;
+                    opacity: 1;
+                    line-height: 1.2;
+                    color: $white;
+               }
+               .border {
+                    margin: 0.5em 0 0.25em 0;
+               }
+               .icon {
+                    display: inline-block;
+               }
+               &.salary {
+                    .icon {
+                         background: url(#{$image-path}/prototype-V1/explore/job-profile/icon-1.png) no-repeat 50% 50%;
+                         background-size: cover;
+                    }
+               }
+               &.hours {
+                    .icon {
+                         background: url(#{$image-path}/prototype-V1/explore/job-profile/icon-2.png) no-repeat 50% 50%;
+                         background-size: cover;
+                    }
+               }
+          }
+     }
+}
+
+
+// ONLY FOR LARGE DESKTOP (1281 up)
+@media #{$xlarge-up} {
+
+
+}
+
+// ONLY FOR LARGE DESKTOP (1281)
+@media #{$xlarge-only} {
+
+}
+
+// ONLY FOR DESKTOP (961)
+@media #{$large-only} {
+
+
+}
+
+// ONLY FOR DESKTOP (961 up)
+@media #{$large-up} {
+
+     header.intro {
+          padding: 0 0 5em 0;
+          margin-bottom: 2em;
+          nav {
+               margin-bottom: 3em;
+          }
+          .row {
+               .columns {
+                    padding: 0;
+               }
+          }
+          h1 {
+               font-size: 1.4rem;
+          }
+          h2 {
+               font-size: 3rem;
+          }
+          .border {
+               margin: 1em 0 0.5em 0;
+          }
+          &.job-profile {
+               section {
+                    margin-top: 4.5em;
+                    h1, p {
+                         font-size: 1rem;
+                    }
+                    p.large {
+                         font-size: 2.25rem;
+                    }
+                    .icon {
+                         width: 6em;
+                         height: 6em;
+                         margin: 0 1em 0 0;
+                    }
+               }
+          }
+     }
+
+}
+
+// TABLET AND UP (461 up)
+@media #{$medium-up} {
+
+
+}
+
+// MEDIUM ONLY (461 - 960)
+@media #{$medium-only} {
+
+     header.intro {
+          padding: 0 0 2.5em 0;
+          border-bottom: 1px solid $white;
+          nav {
+               margin-bottom: 2em;
+          }
+          h1 {
+               font-size: 1.4rem;
+          }
+          h2 {
+               font-size: 2.4rem;
+          }
+          .border {
+               margin: 1em 0 0.5em 0;
+          }
+          .row-divider {
+               display: none;
+          }
+          &.job-families-list {
+               padding: 0 0 4.5em 0;
+               .row-divider {
+                    display: inline-block;
+               }
+          }
+          &.job-profile {
+               section {
+                    margin-top: 2.5em;
+                    h1, p {
+                         font-size: 1rem;
+                    }
+                    p.large {
+                         font-size: 2.25rem;
+                    }
+                    .icon {
+                         width: 6em;
+                         height: 6em;
+                         margin: 0 1em 0 0;
+                    }
+               }
+          }
+     }
+
+
+}
+
+// // ONLY FOR MOBILE (960 and down)
+// @media #{$medium-down} {
+//
+// }
+
+// SMARTPHONE ONLY (Up to 460)
+@media #{$small-only} {
+
+     header.intro {
+          padding: 0 0 2.5em 0;
+          border-bottom: 1px solid $white;
+          nav {
+               margin-bottom: 2em;
+          }
+          h1 {
+               font-size: 1rem;
+          }
+          h2 {
+               font-size: 1.8rem;
+          }
+          .border {
+               margin: 1em 0 0.5em 0;
+          }
+          .row-divider {
+               display: none;
+          }
+          &.job-families-list {
+               padding: 0 0 4.5em 0;
+               .row-divider {
+                    display: inline-block;
+               }
+          }
+          &.job-profile {
+               section {
+                    margin-top: 1.5em;
+                    h1, p {
+                         font-size: 0.875rem;
+                    }
+                    p.large {
+                         font-size: 1.5rem;
+                    }
+                    .icon {
+                         width: 4em;
+                         height: 4em;
+                         margin: 0 1em 0 0;
+                    }
+               }
+          }
+     }
+
+}
